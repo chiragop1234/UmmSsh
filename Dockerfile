@@ -16,8 +16,6 @@ RUN ./autogen.sh
 
 RUN ./configure
  
-RUN make
-
 # Expose the default tmate-ssh-server port
 EXPOSE 2222
 
