@@ -10,10 +10,13 @@ RUN git clone https://github.com/tmate-io/tmate-ssh-server.git
 
 RUN  cd tmate-ssh-server
    
-RUN ./create_keys.sh && \
-    ./autogen.sh && \
-    ./configure && \
-    make
+RUN ./create_keys.sh
+
+RUN ./autogen.sh
+
+RUN ./configure
+ 
+RUN make
 
 # Expose the default tmate-ssh-server port
 EXPOSE 2222
